@@ -23,6 +23,3 @@ def info():
     root.mainloop()
 
 info()
-
-
-a
