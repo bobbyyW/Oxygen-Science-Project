@@ -1,25 +1,42 @@
 # The science Project
 
-import tkinter
+
 from tkinter import *
 import random
 import math
 import time
 
-def pressedBI():
-    print('Yay')
-
-
 root = Tk()
-root.geometry('200x600')
-canvas = tkinter.Canvas()
-#oxygen = tkinter.PhotoImage(file = 'Oxygen.gif')
-#canvas.create_image(0,0, image = oxygen)
+root.title('Oxygen')
+root.geometry('700x700')
+canvas = Canvas(root,height = 600, width = 600, bg = 'white')
+canvas.pack()
+
+#Photo
+
+oxygen = PhotoImage(file = 'Oxygen.gif')
+picture = canvas.create_image(300,300, image = oxygen)
+canvas.move(0,0,picture)
+
+#canvas.move(0,0,oxygen)
+
+oxygenWord = Label(root,text = 'Oxygen', font = ('Times New Roman',30))
+oxygenWord.pack()
 
 
-def info():
-    button = Button(root,text = 'Basic Information', command = pressedBI)
-    button.pack(padx = 20, pady = 20)
-    root.mainloop()
+#BUTTONS
 
-info()
+#BASIC INFO
+def pressedBI():
+    print('')
+
+BIbutton = Button(root,text = 'Basic Information', command = pressedBI)
+BIbutton.pack()
+
+#Bibliography
+
+def pressedBib():
+    print('')
+
+BibButton = Button(root, text = 'Bibliography', command = pressedBib)
+BibButton.pack()
